@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "TerminusTTF";
+  src: url("./terminus-ttf/TerminusTTF.ttf");
+}
+
+:root {
+  --global-font-size: 15px;
+  --global-line-height: 1.4em;
+  --global-space: 10px;
+  --font-stack: TerminusTTF, Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  --mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  --background-color: #271a14;
+  --page-width: 60em;
+  --font-color: #ffc353;
+  --invert-font-color: #222225;
+  --secondary-color: #d5a243;
+  --tertiary-color: #d5a243;
+  --primary-color: #ffc353;
+  --error-color: #ff3c74;
+  --progress-bar-background: #3f3f44;
+  --progress-bar-fill: #db9634;
+  --code-bg-color: #3f3f44;
+  --input-style: solid;
+  --display-h1-decoration: none;
+}
+
+bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200wh;
+  height: 200vh;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 0.2s infinite;
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+.ascii-art {
+  font-size: 1rem;
+  font-family: monospace;
+  white-space: pre;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.main {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem;
+  text-shadow: 0 0 15px var(--font-color);
+  font-size: 1.5rem;
+  -webkit-font-smoothing: none;
+  line-height: 1.2;
+}
+
+.progress-bar-filled {
+  box-shadow: 0 0 15px var(--font-color);
+}
